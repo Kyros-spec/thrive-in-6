@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thrive in 6 - Transform Your Life</title>
+    <style>
+        :root {
+            --primary: #4A9C6E;
+            --secondary: #FF6B6B;
+            --accent: #FFD166;
+            --neutral-1: #2D3436;
+            --neutral-2: #ECF0F1;
+        }
+
+        .font-heading { 
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--neutral-1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: 
+                linear-gradient(rgba(74, 156, 110, 0.9), rgba(46, 134, 171, 0.9)),
+                url('https://images.unsplash.com/photo-1544033527-b192daee1f5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(transparent, white);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        /* Program Grid */
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .week-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .week-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Mobile-First */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                height: 100vh;
+                background: white;
+                transition: 0.3s ease;
+                padding: 2rem;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+                position: fixed;
+                top: 1rem;
+                right: 1rem;
+                z-index: 1000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+        ☰
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Program Introduction">
+        <div class="container">
+            <h1 class="font-heading">Transform Your Life in Just 6 Weeks</h1>
+            <p>Science-backed habits that stick. Real results, no quick fixes.</p>
+            <button class="cta-button" aria-label="Start Free Trial">
+                Start Free Trial → 
+                <span class="cta-highlight"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="program-grid" aria-label="Program Overview">
+        <div class="week-card" data-aos="fade-up">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Weekly meal plans" width="64" height="64">
+            <h3>Personalized Nutrition</h3>
+            <p>Custom meal plans that adapt to your lifestyle</p>
+        </div>
+        <div class="week-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="https://images.unsplash.com/photo-1579126038374-6064e9370f0f" alt="Fitness guidance" width="64" height="64">
+            <h3>Smart Workouts</h3>
+            <p>15-minute effective routines for busy schedules</p>
+        </div>
+        <div class="week-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c" alt="Community support" width="64" height="64">
+            <h3>Supportive Community</h3>
+            <p>Connect with others on the same journey</p>
+        </div>
+        <div class="week-card" data-aos="fade-up" data-aos-delay="300">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438" alt="Progress tracking" width="64" height="64">
+            <h3>Progress Tracking</h3>
+            <p>Monitor your achievements weekly</p>
+        </div>
+        <div class="week-card" data-aos="fade-up" data-aos-delay="400">
+            <img src="https://images.unsplash.com/photo-1506354666784-959d6d497f1a" alt="Expert coaching" width="64" height="64">
+            <h3>Expert Coaching</h3>
+            <p>Live Q&A sessions with nutritionists</p>
+        </div>
+        <div class="week-card" data-aos="fade-up" data-aos-delay="500">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438" alt="Lifetime access" width="64" height="64">
+            <h3>Lifetime Access</h3>
+            <p>Keep resources forever after completion</p>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
