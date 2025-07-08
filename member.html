@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thrive in 6 - Member Dashboard</title>
+    <style>
+        :root {
+            --primary: #4A9C6E;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        .progress-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #eee;
+            margin: 20px auto;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Transformation Dashboard</h1>
+    
+    <div class="dashboard-grid">
+        <div class="progress-circle">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">75% Complete</div>
+        </div>
+        
+        <section>
+            <h2>Today's Meal Plan</h2>
+            <div style="background: white; padding: 15px; border-radius: 10px; margin: 10px 0;">
+                <h3>High-Protein Breakfast Bowl</h3>
+                <p>Calories: 350 | Protein: 28g</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
